@@ -3,9 +3,9 @@
   vars_prompt:
   - name: COURSE
     prompt: Please enter the course
+    Private: false # not confidentional data
   - name: TRAINER
     prompt: Please enter the Trainer
-    Private: false # not confidentional data
   - name: DURATION
     prompt: Please enter the Duration
   tasks:
