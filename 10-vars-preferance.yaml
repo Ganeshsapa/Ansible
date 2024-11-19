@@ -1,0 +1,23 @@
+- name: varialbe to print
+  hosts: web
+  vars: # play level vars
+    COURSE: "DevOps"
+    DURATION: "3months"
+    TIMINGS: "morning"
+  vars_prompt:
+  - name: COURSE
+    prompt: Please enter the course
+    private: false # not confidentional data
+  - name: TRAINER
+    prompt: Please enter the Trainer
+  - name: DURATION
+    prompt: Please enter the Duration
+    
+  tasks:
+  - name: print the information
+    vars: # tasks level vars
+        COURSE: "DevOps"
+        DURATION: "3months"
+        TIMINGS: "morning"    
+    ansible.builtin.debug:
+         msg: "Hi , I am learning and practicing {{COURSE}}, duration: {{DURATION}}, timings:{{TIMINGS}}"
