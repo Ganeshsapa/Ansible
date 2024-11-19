@@ -1,4 +1,4 @@
-- name: varialbles from other files
+- name: variables from files
   hosts: web
   vars_files:
     - vars.yaml
@@ -6,3 +6,4 @@
     name: print the variables inside the message
     ansible.builtin.debug:
       msg: "Hi All, I am learning {{COURSE}}, Duration {{DURATION}} and Timings:{{TIMINGS}}"
+ 
