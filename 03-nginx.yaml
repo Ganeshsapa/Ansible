@@ -2,15 +2,15 @@
   hosts:  web
   become: yes #take subo access
   tasks: 
-  - name: install nginx #install
+  - name: install nginx
     ansible.builtin.package: # heterongenous module that can work all distrubtion
       name: nginx
-      state:  present
+      state: present
 
   - name: run nginx
     ansible.builtin.service:
-    name: nginx
-    state: started
-    enabled: yes
+      name: nginx
+      state: started
+      enabled: yes
   
   
