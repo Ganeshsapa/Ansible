@@ -1,8 +1,9 @@
 - name: nginx install and run
-hosts:  web
-tasks: 
+  hosts:  web
+  tasks: 
   - name: install nginx
     anisble.builtin.package: # heterongenous module that can work all distrubtion
-    state:  present
+      name: nginx
+      state:  present
   
   
