@@ -8,11 +8,7 @@
   - name: COURSE
     prompt: Please enter the course
     private: false # not confidentional data
-  - name: TRAINER
-    prompt: Please enter the Trainer
-  - name: DURATION
-    prompt: Please enter the Duration
-    
+   
   tasks:
   - name: print the information
     vars: # tasks level vars
