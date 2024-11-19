@@ -1,6 +1,6 @@
 - name: varialbe to print
   hosts: web
   tasks:
-    - name:print the information
-      ansilbe.builtin.debug:
+    - name: print the information
+      ansible.builtin.debug:
         msg: "Hi , I am learning and practicing DevOps"
