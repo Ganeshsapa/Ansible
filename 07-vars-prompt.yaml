@@ -11,4 +11,4 @@
   - name: Print the course information
     ansible.builtin.debug:
   - name: DURATION
-      msg: "Hi All, I am learning {{COURSE}},{{TRAINER}} and {{DURATION}}"
+      msg: "Hi ,I am learning {{COURSE}},{{TRAINER}} and {{DURATION}}"
