@@ -5,6 +5,7 @@
     prompt: Please enter the course
   - name: TRAINER
     prompt: Please enter the Trainer
+    Private: false # not confidentional data
   - name: DURATION
     prompt: Please enter the Duration
   tasks:
