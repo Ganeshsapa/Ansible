@@ -1,6 +1,6 @@
 - name: varialbe to print
   hosts: web
-  vars:
+  vars: # play level vars
     COURSE: "DevOps"
     DURATION: "3months"
     TIMINGS: "morning"
@@ -10,8 +10,8 @@
          msg: "Hi , I am learning and practicing {{COURSE}}, duration: {{DURATION}}, timings:{{TIMINGS}}"
 
     - name: print the information
-      vars:
-        COURSE: "DEV+OPSERATIONS"
+      vars: #task level vars
+        COURSE: "DEV+OPSERATIONS" 
       ansible.builtin.debug:
          msg: "Hi , I am learning and practicing {{COURSE}}, duration: {{DURATION}}, timings:{{TIMINGS}}"
 
