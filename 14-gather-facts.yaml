@@ -3,5 +3,5 @@
   become: yes
   tasks:
   - name: printh the facts
-    anisble.builtin.debug:
+    ansible.builtin.debug:
       msg: "{{ ansible_facts }}"
