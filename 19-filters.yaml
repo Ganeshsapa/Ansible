@@ -46,4 +46,4 @@
         trainer: "Siva"
         timings: "morning"
     ansible.builtin.debug:
-      msg: "{{ courses | dic2itimes }}"
+      msg: "{{ courses | dic2items }}"
