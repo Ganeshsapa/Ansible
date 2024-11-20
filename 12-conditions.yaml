@@ -1,5 +1,6 @@
 - name: check a number is less than 10 or not
   hosts: web
+  connection: yes
   vars:
     number: 120
   # vars_prompt:
