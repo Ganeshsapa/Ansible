@@ -29,13 +29,26 @@
     amazon.aws.route53:
       state: present
       zone: "{{ zone }}"
-      record: "{{ item.item }}.{{ zone }}" #mysql .chanakya.bolog
+      record: "{{ item.item }}.{{ zone }}" #chanakya.bolog
       type: A
       ttl: 1
-      value: "{{ item.instances[0].private_ip_address}}"
+      value: "{{ item.instances[0].private_ip_address }}"
       wait: True
       overwrite: true
+    loop: "{{ ec2_instances.results }}"
+
+    - name: create r53 records for frontend
+      amazon.aws.route53:
+        state: present
+        zone: "{{ zone }}"
+        record: "{{ zone }}" #chanakya.bolog
+        type: A
+        ttl: 1
+        value: "{{ item.instances[0].public_ip_address }}"
+        wait: True
+        overwrite: true
 
     loop: "{{ ec2_instances.results }}"
+    when: ec2_instance.results.item == "frontend"
 
   
