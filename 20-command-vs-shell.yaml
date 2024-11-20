@@ -4,3 +4,7 @@
   tasks:
     - name: execute the shell
       ansible.builtin.shell: ls -ltr > /tmp/output.txt # login into the server and execute 
+
+- name: check the process
+  ansible.builtin.command: ps -ef | grep ssh
+  register: output
