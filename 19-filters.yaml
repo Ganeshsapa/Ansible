@@ -38,11 +38,12 @@
         timings: "morning"
     ansible.builtin.debug:
       msg: "{{ course }}"
-    - name: convert map to list variables
+    
+  - name: convert map to list variables
     vars:
-      course:
+      courses:
         name: "DevOps with AWS"
         trainer: "Siva"
         timings: "morning"
     ansible.builtin.debug:
-      msg: "{{ course | dic2itimes }}"
+      msg: "{{ courses | dic2itimes }}"
