@@ -1,0 +1,6 @@
+- name: demo for filters
+  host: web
+  tasks:
+  - name: print the default variable
+    ansible.builtin.debug:
+      msg: "Hello {{ course }}"
