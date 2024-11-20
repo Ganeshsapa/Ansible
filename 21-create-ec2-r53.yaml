@@ -23,4 +23,17 @@
   - name: create ec2 instance
     ansible.builtin.debug:
       msg: "{{ ec2_instances }}"
+
+  - name: create r53 records
+    amazon.aws.route53:
+      state: present
+      zone: foo.com
+      record: new.foo.com
+      type: A
+      ttl: 7200
+      value: 1.1.1.1,2.2.2.2,3.3.3.3
+      wait: True
+
+    loop: "{{ ec2_instances.results }}"
+
   
