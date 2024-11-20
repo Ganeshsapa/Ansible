@@ -3,7 +3,7 @@
   connection: local
   vars:
     # number: 120
-  # vars_prompt:
+  vars_prompt:
     - name: number
       prompt: please enter number
       private: false # not confidential
