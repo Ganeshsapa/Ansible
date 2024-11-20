@@ -9,6 +9,7 @@
     - mysql
     - backend
     - frontend
+    zone: chanakya.blog
   tasks:
   - name: create ec2 instance
     amazon.aws.ec2_instance:
@@ -27,12 +28,13 @@
   - name: create r53 records
     amazon.aws.route53:
       state: present
-      zone: foo.com
-      record: new.foo.com
+      zone: "{{ zone }}"
+      record: {{ item.item }}.{{ zone }} #mysql .chanakya.bolog
       type: A
-      ttl: 7200
-      value: 1.1.1.1,2.2.2.2,3.3.3.3
+      ttl: 1
+      value: "{{ item.instances[0].private_ip_address}}"
       wait: True
+      overwrite: true
 
     loop: "{{ ec2_instances.results }}"
 
