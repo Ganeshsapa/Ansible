@@ -24,7 +24,7 @@
     ansible.builtin.debug:
       msg: " {{ numbers | unique }}"
   
-    - name: get the min and max values
+  - name: get the min and max values
     vars:
       numbers: [ 1,2,3,45,6,45,2 ]
     ansible.builtin.debug:
