@@ -11,19 +11,12 @@
     - frontend
     zone: chanakya.blog
   tasks:
-  - name: Install boto and botocore using pip
+  - name: ansible to install boto3 and botocore
     ansible.builtin.pip:
-        name:
-          - boto
-          - botocore
-        executable: /usr/bin/pip3.9
-    become: yes  # Use this line if you need to install system-wide
-  # - name: ansible to install boto3 and botocore
-  #   ansible.builtin.pip:
-  #     name:
-  #       -boto
-  #       -botocore
-  #     executable: pip3.9  
+      name:
+        -boto
+        -botocore
+      executable: pip3.9  
   - name: create ec2 instance
     amazon.aws.ec2_instance:
       name: "{{ item }}"
