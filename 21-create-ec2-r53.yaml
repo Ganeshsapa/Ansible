@@ -11,12 +11,12 @@
     - frontend
     zone: chanakya.blog
   tasks:
-  - name: ansible to install boto3 and botocore
-    ansible.builtin.pip:
-      name:
-        -boto
-        -botocore
-      executable: pip3.9 
+  # - name: ansible to install boto3 and botocore
+  #   ansible.builtin.pip:
+  #     name:
+  #       -boto
+  #       -botocore
+  #     executable: pip3.9 
       # user: yes  # Installs packages only for the current user
       # extra_args: --user
       # virtualenv: /path/to/virtualen
