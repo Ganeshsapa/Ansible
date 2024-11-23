@@ -16,7 +16,7 @@
       name:
         -boto
         -botocore
-      executable: /usr/bin/pip3.9 
+      executable: pip3.9 
       user: yes  # Installs packages only for the current user
       extra_args: --user
   - name: create ec2 instance
