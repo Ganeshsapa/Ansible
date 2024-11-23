@@ -16,7 +16,7 @@
       name:
         -boto
         -botocore
-      executable: pip3.9 
+      # executable: pip3.9 
       user: yes  # Installs packages only for the current user
       extra_args: --user
       virtualenv: /path/to/virtualen
